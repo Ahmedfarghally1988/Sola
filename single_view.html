@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sola :: Single View</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Sola " />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/images/favicon.png" />
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./assets/css/output.css" />
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Youtube CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css">
+
+</head>
+
+<body>
+
+  <header class="relative top-0 left-0 w-full z-50">
+
+    <div class="hidden md:block bg-white border-b">
+      <div class="px-6">
+        <div class="flex items-center justify-between">
+
+          <!-- left side -->
+          <div class="flex items-center gap-4 py-2 text-sm">
+            <a href="tel:+201102001420" class="flex items-center gap-1 hover:text-[#cc9966]">
+              <span class="flaticon-call"></span>
+              <i data-lucide="phone" class="w-4 h-4 stroke-[1]"></i> +201102001420
+            </a>
+            <a href="mailto:info@soladahabiya.com" class="flex items-center gap-1 hover:text-[#cc9966]">
+              <span class="flaticon-envelope"></span>
+              <i data-lucide="mail" class="w-4 h-4 stroke-[1]"></i> info@soladahabiya.com
+            </a>
+          </div>
+
+          <!-- right side -->
+          <div class="flex items-center gap-4 py-2 text-sm justify-end">
+
+            <a href="#" class="flex items-center gap-1 hover:text-[#cc9966]">
+              <i data-lucide="rss" class="w-4 h-4 strok-[1]"></i>
+              blog
+            </a>
+
+            <a href="#" class="flex items-center gap-1 hover:text-[#cc9966]">
+              <i data-lucide="mail" class="w-4 h-4 strok-[1]"></i>
+              contact us
+            </a>
+
+            <a href="#" class="flex items-center gap-1 hover:text-[#cc9966]">
+              <i data-lucide="user" class="w-4 h-4 strok-[1]"></i> testimonials
+            </a>
+
+            <!-- language dropdown -->
+            <div class="relative group">
+
+              <button class="flex items-center gap-1 hover:text-[#cc9966]">
+                <i data-lucide="globe" class="w-4 h-4 strok-[1]"></i>
+                English
+              </button>
+
+              <!-- dropdown -->
+              <ul class="absolute right-0 mt-0 w-48 bg-white border shadow-lg rounded hidden group-hover:block z-50">
+
+                <li>
+                  <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/en.webp" class="h-3 w-4">
+                    English
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/es" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/es.webp" class="h-3 w-4">
+                    Español
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/it" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/it.webp" class="h-3 w-4">
+                    Italiano
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/fr.webp" class="h-3 w-4">
+                    Français
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/pt" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/pt.webp" class="h-3 w-4">
+                    Português
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/de" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/de.webp" class="h-3 w-4">
+                    Deutsch
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/cs" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/cs.webp" class="h-3 w-4">
+                    Čeština
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/ja" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/ja.webp" class="h-3 w-4">
+                    日本語
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/ru" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/ru.webp" class="h-3 w-4">
+                    Русский
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/zh" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100">
+                    <img src="assets/images/zh.webp" class="h-3 w-4">
+                    中文
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-[#021322] shadow">
+
+      <a href="#"><img src="./assets/images/logo.png" alt="Logo" class="h-10" /></a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex items-center gap-6 text-lg text-white font-500">
+
+        <li class="active primary-text"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <!-- Dropdown -->
+        <li class="relative group">
+          <button class="flex items-center gap-1">
+            Cabins & Suites
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </button>
+
+          <ul class="absolute left-0 top-full w-40 bg-white primary-text  shadow rounded hidden group-hover:block">
+            <li class="px-3 py-2 hover-menu"><a href="#">Suites 1</a></li>
+            <li class="px-3 py-2 hover-menu"><a href="#">Suites 2</a></li>
+            <li class="px-3 py-2 hover-menu"><a href="#">Suites 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Itinerary</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="hidden md:flex gap-3 btns_header ">
+        <button class="flex gap-3 text-white px-4 py-2 border border-[#cc9966] rounded hover-menu transition"><i
+            data-lucide="phone"></i> Contact</button>
+        <button class="flex gap-3 px-4 py-2 primary-color text-white rounded hover-main transition"><i
+            data-lucide="bookmark"></i> Booking</button>
+      </div>
+
+
+      <!-- Mobile Button -->
+      <button id="openBtn" class="lg:hidden">
+        <i data-lucide="menu"></i>
+      </button>
+
+
+
+    </nav>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 hidden opacity-0 transition-opacity z-40"> </div>
+
+    <!-- MOBILE SIDEBAR -->
+    <div id="sidebar"
+      class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg translate-x-full transition-transform duration-300 z-50">
+
+      <div class="flex items-center justify-between p-4 border-b">
+        <h2 class="font-bold">Menu</h2>
+
+        <button id="closeBtn">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <ul class="p-4 space-y-4">
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <button id="serviceToggle" class="flex justify-between w-full items-center">
+            <span> Cabins & Suites</span>
+            <i data-lucide="chevron-right" id="serviceIcon" class="w-4 h-4"></i>
+          </button>
+
+          <!-- Submenu panel -->
+          <div id="servicePanel" class="absolute top-0 right-0 h-full w-80 bg-white
+              translate-x-full transition-transform duration-300 z-50">
+
+            <div class="p-4 border-b flex items-center justify-between">
+              <h3 class="font-bold"> Cabins & Suites</h3>
+              <button id="backBtn">
+                <i data-lucide="arrow-left"></i>
+              </button>
+            </div>
+
+            <ul class="p-4 space-y-3 text-sm">
+              <li>Suites 1</li>
+              <li>Suites 2</li>
+              <li>Suites 3</li>
+            </ul>
+
+          </div>
+        </li>
+
+        <li><a href="#">Itinerary</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+    </div>
+
+  </header>
+
+  <section class="container-site py-4">
+
+    <nav class="text-sm text-gray-500 mb-4">
+
+      <ol class="flex items-center gap-2">
+
+        <li>
+          <a href="/" class="flex gap-1 hover:text-[#cc9966]"><i data-lucide="home" class="w-5 h-5 stroke-[1]"></i>
+            Home</a>
+        </li>
+
+        <li>/</li>
+
+        <li>
+          <a href="/sola-dahabiya" class="hover:text-[#cc9966]">
+            Sola Dahabiya
+          </a>
+        </li>
+
+        <li>/</li>
+
+        <li class="text-black font-medium">
+          Luxor to Aswan - Round Trip
+        </li>
+
+      </ol>
+
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+
+      <!-- LEFT HERO -->
+      <div class="lg:col-span-2 relative">
+        <img src="assets/images/slider-1.jpg" class="gallery-open w-full h-[500px] object-cover rounded cursor-pointer"
+          data-index="0">
+
+        <div class="absolute inset-0 rounded bg-black/40 flex items-end p-6">
+          <div class="text-white">
+            <h1 class="text-3xl font-bold">Luxury Nile Cruise</h1>
+            <p class="text-sm mt-2">Experience the best Dahabiya journey</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT GRID -->
+      <div class="grid grid-cols-2 gap-3">
+
+        <img src="assets/images/slider-1.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="0">
+        <img src="assets/images/Panoramic.webp"
+          class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer" data-index="1">
+        <img src="assets/images/slider-3.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="2">
+        <img src="assets/images/slider-1.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="3">
+        <img src="assets/images/slider-2.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="4">
+        <img src="assets/images/slider-3.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="5">
+        <img src="assets/images/slider-3.jpg" class="gallery-open w-full h-[115px] object-cover rounded cursor-pointer"
+          data-index="6">
+
+        <!-- + more -->
+        <div class="relative cursor-pointer gallery-open" data-index="0">
+          <img src="assets/images/slider-1.jpg" class="w-full h-[115px] object-cover rounded">
+
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center rounded">
+            <span class="text-white text-xl text-center"><i data-lucide="camera"
+                class="w-[64px] h-[64px] stroke-[1]"></i> 12</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+
+      <div class="w-full max-w-5xl">
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <img src="assets/images/slider-1.jpg" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Panoramic.webp" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/slider-3.jpg" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/slider-1.jpg" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/slider-2.jpg" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/slider-3.jpg" class="w-full h-[500px] object-contain">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/Panoramic.webp" class="w-full h-[500px] object-contain">
+            </div>
+
+          </div>
+
+          <!-- arrows -->
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="container-site">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <!-- Vessel -->
+      <div
+        class="bg-white shadow-md hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-orange-300 transition-all duration-300 rounded-lg p-6 text-center">
+        <div
+          class="w-[75px] h-[75px] mx-auto mb-4 flex items-center justify-center rounded-full bg-[#fdf5ec] text-orange-500">
+          <i data-lucide="phone" class="w-[36px] h-[36px] stroke-[1]"></i>
+        </div>
+        <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Vessel</p>
+        <h5 class="font-semibold text-lg">Sola Dahabiya</h5>
+      </div>
+
+      <!-- Departure -->
+      <div
+        class="bg-white shadow-md hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-orange-300 transition-all duration-300 rounded-lg p-6 text-center">
+        <div
+          class="w-[75px] h-[75px] mx-auto mb-4 flex items-center justify-center rounded-full bg-[#fdf5ec] text-orange-500">
+          <i data-lucide="map-pinned" class="w-[36px] h-[36px] stroke-[1]"></i>
+        </div>
+        <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Departure</p>
+        <h5 class="font-semibold text-lg">Luxor</h5>
+      </div>
+
+      <!-- Arrival -->
+      <div
+        class="bg-white shadow-md hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-orange-300 transition-all duration-300 rounded-lg p-6 text-center">
+        <div
+          class="w-[75px] h-[75px] mx-auto mb-4 flex items-center justify-center rounded-full bg-[#fdf5ec] text-orange-500">
+          <i data-lucide="route" class="w-[36px] h-[36px] stroke-[1]"></i>
+        </div>
+        <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Arrival</p>
+        <h5 class="font-semibold text-lg">Luxor / Aswan</h5>
+      </div>
+
+      <!-- Duration -->
+      <div
+        class="bg-white shadow-md hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-orange-300 transition-all duration-300 rounded-lg p-6 text-center">
+        <div
+          class="w-[75px] h-[75px] mx-auto mb-4 flex items-center justify-center rounded-full bg-[#fdf5ec] text-orange-500">
+          <i data-lucide="clock" class="w-[36px] h-[36px] stroke-[1]"></i>
+        </div>
+        <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Duration</p>
+        <h5 class="font-semibold text-lg">8 Days / 7 Nights</h5>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container-site">
+    <div class="block block md:flex gap-4 p-4 bg-[#fdf5ec] rounded-lg my-4 justify-between items-center">
+      <p class="flex justify-center py-3 md:py-0 md:justify-start items-center gap-2"> <i data-lucide="calendar"
+          class="w-4 h-4 stroke-[2]"></i> Every Monday from October to April</p>
+      <p class="flex justify-center py-3 md:py-0 md:justify-start items-center gap-2"> <i data-lucide="user"
+          class="w-4 h-4 stroke-[2]"></i> Private & Small Group Tour</p>
+      <p class="flex justify-center py-3 md:py-0 md:justify-start items-center gap-2"> <i data-lucide="utensils"
+          class="w-4 h-4 stroke-[2]"></i> Every Monday from October to April</p>
+    </div>
+  </section>
+
+  <section class="container-site">
+    <div class="grid grid-cols-12 gap-4 mt-4">
+      <div class="col-span-12 md:col-span-7 pr-[35px] pt-[30px]">
+        <h3 class="font-f-tit text-2xl font-bold">Sola Dahabiya Experience</h3>
+        <p class="desc text-gray-600 my-3 leading-relaxed mx-auto line-clamp-5" data-clamp="5">
+          Sola Dahabiya offers a unique luxury experience on the Nile with comfort, privacy, and traditional sailing
+          style.
+          You will enjoy personalized service, premium cabins, gourmet dining, and unforgettable views along the river.
+          The journey is designed for relaxation and cultural discovery with stops at iconic historical sites.
+
+          Additional hidden text continues here to demonstrate expand behavior. Sola Dahabiya offers a unique luxury
+          experience on the Nile with comfort, privacy, and traditional sailing style.
+          You will enjoy personalized service, premium cabins, gourmet dining, and unforgettable views along the river.
+          The journey is designed for relaxation and cultural discovery with stops at iconic historical sites.
+          Additional hidden text continues here to demonstrate expand behavior. Sola Dahabiya offers a unique luxury
+          experience on the Nile with comfort, privacy, and traditional sailing style.
+          You will enjoy personalized service, premium cabins, gourmet dining, and unforgettable views along the river.
+          The journey is designed for relaxation and cultural discovery with stops at iconic historical sites.
+          Additional hidden text continues here to demonstrate expand behavior.
+        </p>
+
+        <!-- read more -->
+        <button class="toggleBtn mt-2 mb-4 primary-text hover:underline">
+          Read More
+        </button>
+      </div>
+      <div class="col-span-12 md:col-span-5">
+        <div class="w-full h-[275px]">
+          <lite-youtube videoid="A0cxGhGIeIo" class="block w-full h-full rounded-lg overflow-hidden">
+          </lite-youtube>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-site my-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+
+      <h3 class="font-f-tit text-2xl font-bold">
+        Sailing Itinerary
+        </h2>
+
+        <a href="#" id="downloadItinerary"
+          class="inline-flex items-center gap-2 px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+          <i data-lucide="file-text" class="w-4 h-4 stroke-[2]"></i>
+          Download Itinerary (PDF)
+        </a>
+
+    </div>
+
+    <div class="grid grid-cols-1">
+
+      <div
+        class="bg-white mb-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100">
+
+        <!-- Day Number + Title -->
+        <div class="flex items-center gap-4 mb-4">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-orange-500 text-white font-semibold text-2xl shrink-0">
+            01
+          </div>
+
+          <h3 class="text-2xl font-semibold font-f-tit">
+            Arrival Luxor – Embarkation
+          </h3>
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Pick up from Luxor airport/hotel, transfer to the dahabiya.
+          Welcome drink & sunset sail. Dinner on board.
+        </p>
+
+        <!-- Meals -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-600 rounded-lg mb-5">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Meals included: Full Board</span>
+        </div>
+
+        <!-- Gallery -->
+        <div class="grid grid-cols-3 md:grid-cols-10 gap-3">
+
+          <img src="assets/images/slider-1.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-2.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-3.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+        </div>
+
+      </div>
+
+      <div
+        class="bg-white mb-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100">
+
+        <!-- Day Number + Title -->
+        <div class="flex items-center gap-4 mb-4">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-orange-500 text-white font-semibold text-2xl shrink-0">
+            02
+          </div>
+
+          <h3 class="text-2xl font-semibold font-f-tit">
+            Luxor West Bank & Banana Island
+          </h3>
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Pick up from Luxor airport/hotel, transfer to the dahabiya.
+          Welcome drink & sunset sail. Dinner on board.
+        </p>
+
+        <!-- Meals -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-600 rounded-lg mb-5">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Meals included: Full Board</span>
+        </div>
+
+        <!-- Gallery -->
+        <div class="grid grid-cols-3 md:grid-cols-10 gap-3">
+
+          <img src="assets/images/slider-1.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-2.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-3.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+        </div>
+
+      </div>
+
+      <div
+        class="bg-white mb-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100">
+
+        <!-- Day Number + Title -->
+        <div class="flex items-center gap-4 mb-4">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-orange-500 text-white font-semibold text-2xl shrink-0">
+            03
+          </div>
+
+          <h3 class="text-2xl font-semibold font-f-tit">
+            Edfu – Temple of Horus
+          </h3>
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Pick up from Luxor airport/hotel, transfer to the dahabiya.
+          Welcome drink & sunset sail. Dinner on board.
+        </p>
+
+        <!-- Meals -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-600 rounded-lg mb-5">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Meals included: Full Board</span>
+        </div>
+
+        <!-- Gallery -->
+        <div class="grid grid-cols-3 md:grid-cols-10 gap-3">
+
+          <img src="assets/images/slider-1.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-2.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+          <img src="assets/images/it-3.jpg" class="w-full h-28 object-cover rounded-lg cursor-pointer"
+            onclick="openImage(this.src)">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="container-site">
+    <h3 class="font-f-tit text-2xl font-bold pb-3 block">Guest Impressions</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+      <div class="w-full h-[250px]">
+        <lite-youtube videoid="A0cxGhGIeIo" class="block w-full h-full rounded-lg overflow-hidden">
+        </lite-youtube>
+      </div>
+      <div class="w-full h-[250px]">
+        <lite-youtube videoid="A0cxGhGIeIo" class="block w-full h-full rounded-lg overflow-hidden">
+        </lite-youtube>
+      </div>
+      <div class="w-full h-[250px]">
+        <lite-youtube videoid="A0cxGhGIeIo" class="block w-full h-full rounded-lg overflow-hidden">
+        </lite-youtube>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container-site">
+    <h3 class="font-f-tit text-2xl font-bold pb-3 block">Rates & Availability</h3>
+    <div id="priceAccordion" class="space-y-4">
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">October 2026</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm text-center">
+              <thead class="bg-[#cc9966] text-white">
+                <tr>
+                  <th class="px-4 py-3 whitespace-nowrap flex items-center gap-2"><i data-lucide="calendar-check-2"
+                      class="w-[16px] h-[16px]"></i>Date</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3">1-7-2026</td>
+                  <td class="px-4 py-3">$2100</td>
+                  <td class="px-4 py-3">$2600</td>
+                  <td class="px-4 py-3">$3100</td>
+                  <td class="px-4 py-3">$3300</td>
+                  <td class="px-4 py-3">$3900</td>
+                  <td class="px-4 py-3">$4700</td>
+                  <td class="px-4 py-3">
+                    <button
+                      class="open-booking-modal bg-[#cc9966] hover:bg-[#b88758] text-white px-4 py-2 rounded-md transition">
+                      Book Now →
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">October 2026</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm text-center">
+              <thead class="bg-[#cc9966] text-white">
+                <tr>
+                  <th class="px-4 py-3 whitespace-nowrap flex items-center gap-2"><i data-lucide="calendar-check-2"
+                      class="w-[16px] h-[16px]"></i>Date</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3">15-7-2026</td>
+                  <td class="px-4 py-3">$2100</td>
+                  <td class="px-4 py-3">$2600</td>
+                  <td class="px-4 py-3">$3100</td>
+                  <td class="px-4 py-3">$3300</td>
+                  <td class="px-4 py-3">$3900</td>
+                  <td class="px-4 py-3">$4700</td>
+                  <td class="px-4 py-3">
+                    <button
+                      class="open-booking-modal bg-[#cc9966] hover:bg-[#b88758] text-white px-4 py-2 rounded-md transition">
+                      Book Now →
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">October 2026</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm text-center">
+              <thead class="bg-[#cc9966] text-white">
+                <tr>
+                  <th class="px-4 py-3 whitespace-nowrap flex items-center gap-2"><i data-lucide="calendar-check-2"
+                      class="w-[16px] h-[16px]"></i>Date</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Cabin</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Single Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Double Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Triple Suite</th>
+                  <th class="px-4 py-3 whitespace-nowrap">Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3">30-7-2026</td>
+                  <td class="px-4 py-3">$2100</td>
+                  <td class="px-4 py-3">$2600</td>
+                  <td class="px-4 py-3">$3100</td>
+                  <td class="px-4 py-3">$3300</td>
+                  <td class="px-4 py-3">$3900</td>
+                  <td class="px-4 py-3">$4700</td>
+                  <td class="px-4 py-3">
+                    <button
+                      class="open-booking-modal bg-[#cc9966] hover:bg-[#b88758] text-white px-4 py-2 rounded-md transition">
+                      Book Now →
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="container-site">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+
+      <!-- Included -->
+      <div class="p-6 border border-green-200 rounded-xl bg-green-50">
+        <h3 class="flex items-center gap-2 text-xl font-semibold text-green-700 mb-4">
+          <i data-lucide="check-circle" class="w-5 h-5"></i>
+          Included
+        </h3>
+
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+            <span>7 nights full-board accommodation</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+            <span>Egyptologist guide during visits</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+            <span>All entrance fees (temples)</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+            <span>Bottled water & tea/coffee</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+            <span>Taxes & service charges</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Excluded -->
+      <div class="p-6 border border-red-200 rounded-xl bg-red-50">
+        <h3 class="flex items-center gap-2 text-xl font-semibold text-red-700 mb-4">
+          <i data-lucide="x-circle" class="w-5 h-5"></i>
+          Not Included
+        </h3>
+
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <i data-lucide="x-circle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+            <span>International / domestic flights</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="x-circle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+            <span>Beverages (soft drinks & alcohol)</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="x-circle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+            <span>Tipping for crew & guides</span>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <i data-lucide="x-circle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+            <span>Travel insurance</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container-site">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-5">
+
+      <div
+        class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-[#cc9966] hover:shadow-lg transition">
+        <i data-lucide="bed-single" class="w-10 h-10 mx-auto text-[#cc9966] mb-4"></i>
+        <h4 class="text-lg font-semibold mb-2">Cabins</h4>
+        <p class="text-gray-600 text-sm">
+          5 Deluxe Cabins + 1 Owner's Suite
+        </p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-[#cc9966] hover:shadow-lg transition">
+        <i data-lucide="ruler" class="w-10 h-10 mx-auto text-[#cc9966] mb-4"></i>
+        <h4 class="text-lg font-semibold mb-2">Dimensions</h4>
+        <p class="text-gray-600 text-sm">
+          32m (L) x 8m (W)
+        </p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-[#cc9966] hover:shadow-lg transition">
+        <i data-lucide="wifi" class="w-10 h-10 mx-auto text-[#cc9966] mb-4"></i>
+        <h4 class="text-lg font-semibold mb-2">Facilities</h4>
+        <p class="text-gray-600 text-sm">
+          Ensuite bath, A/C, traditional lounge, sundeck with jacuzzi
+        </p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-[#cc9966] hover:shadow-lg transition">
+        <i data-lucide="utensils" class="w-10 h-10 mx-auto text-[#cc9966] mb-4"></i>
+        <h4 class="text-lg font-semibold mb-2">Egyptian Kitchen</h4>
+        <p class="text-gray-600 text-sm">
+          Authentic clay oven & gourmet dining
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container-site">
+    <h3 class="font-f-tit text-2xl font-bold pb-3 block">Moments Aboard Sola</h3>
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-3 mb-5" id="galleryTout">
+      <img src="assets/images/slider-1.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-3.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-1.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-3.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-1.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-3.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+      <img src="assets/images/slider-2.jpg"
+        class="cursor-pointer h-[100px] md:h-[175px] w-[100-full] rounded-lg hover:opacity-90 gallery-img-crusie">
+    </div>
+
+    <!-- LightboxCrusie -->
+    <div id="lightboxCrusie" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50">
+      <button id="closeLightboxCrusie" class="absolute top-5 right-5 text-white text-3xl z-50">✕</button>
+      <div class="swiper lightboxSwiperCrusie w-full max-w-4xl h-[80vh]">
+        <div class="swiper-wrapper h-full"></div>
+        <div id="prevBtnCrusie" class="swiper-button-prev text-white"></div>
+        <div id="nextBtnCrusie" class="swiper-button-next text-white"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container-site">
+    <h3 class="font-f-tit text-2xl font-bold pb-3 block">Policies & Support</h3>
+    <div id="priceAccordion" class="space-y-4 mb-5">
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">Booking & Payment Conditions</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="bg-white">
+            <p class="p-4 text-md">30% deposit to secure reservation, balance due 30 days prior to departure. Credit
+              cards & bank transfer accepted.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">Children Policy</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="bg-white">
+            <p class="p-4 text-md">Children under 6 free (sharing parents), 6-12 years 40% discount.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button
+          class="accordion-header w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-semibold text-lg">Cancellation Policy</span>
+          <i data-lucide="chevron-down" class="w-[24px] h-[24px] transition-transform duration-300"></i>
+        </button>
+
+        <div class="accordion-content hidden">
+          <div class="bg-white">
+            <p class="p-4 text-md">60+ days: full refund; 30-59 days: 50% refund; less than 30 days: non-refundable.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="bg-[#0f172a] text-white py-5 overflow-hidden">
+
+    <div class="container-site">
+
+      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-12 gap-10">
+
+
+        <div class="col-span-12 md:col-span-3">
+          <img src="./assets/images/logo.png" class="w-32 mb-4">
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Sola Best luxury dahabiya Nile cruise offers unforgettable journeys through the heart of Egypt with comfort
+            and elegance.
+          </p>
+        </div>
+
+
+        <div class="col-span-12 md:col-span-6">
+          <div class="block md:flex justify-between gap-4">
+            <div class="basis-1/3 my-4 md:my-0">
+              <h3 class="font-semibold text-lg uppercase mb-4">quick links</h3>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li><a href="#" class="hover:text-[#cc9966]">Home</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">about us</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">itinerary</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">price</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">gallery</a></li>
+              </ul>
+            </div>
+            <div class="basis-1/3 my-4 md:my-0">
+              <h3 class="font-semibold text-lg uppercase mb-4">crusie links</h3>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li><a href="#" class="hover:text-[#cc9966]">5 Days From Luxor to Aswan</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">4 Days From Aswan to Luxor</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">4 Days to Luxor</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">8 Days From Luxor to Aswan</a></li>
+                <li><a href="#" class="hover:text-[#cc9966]">5 Days From Luxor </a></li>
+
+              </ul>
+            </div>
+            <div class="basis-1/3 my-4 md:my-0">
+              <h3 class="font-semibold text-lg uppercase mb-4">contact us</h3>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <!-- Phone -->
+                <li class="flex items-start gap-3">
+                  <i data-lucide="phone" class="w-4 h-4 text-[#cc9966] mt-1"></i>
+                  <span>+20 100 000 0000</span>
+                </li>
+
+                <!-- Address -->
+                <li class="flex items-start gap-3">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-[#cc9966] mt-1"></i>
+                  <span>Al Azbakiyah, Cairo, Egypt</span>
+                </li>
+
+                <!-- Email -->
+                <li class="flex items-start gap-3">
+                  <i data-lucide="mail" class="w-4 h-4 text-[#cc9966] mt-1"></i>
+                  <span>info@example.com</span>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-span-12 md:col-span-3">
+          <h3 class="font-semibold text-lg uppercase mb-4">Follow Us</h3>
+
+          <p class="text-gray-300 text-sm mb-4">
+            Stay connected with us on social media
+          </p>
+
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#cc9966] transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#cc9966] transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#cc9966] transition">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- bottom bar -->
+      <div class="border-t border-white/10 mt-10 pt-6 text-center text-gray-400 text-sm">
+        © 2026 Sola. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50"
+    onclick="closeImageOnOutside(event)">
+
+    <div class="relative w-auto md:w-auto" onclick="event.stopPropagation()">
+
+      <!-- close -->
+      <button onclick="closeImage()" class="absolute -top-10 right-0 text-white text-2xl">
+        ✕
+      </button>
+
+      <!-- image -->
+      <img id="modalImage" class="w-full h-auto rounded shadow-lg">
+    </div>
+
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4">
+
+    <div class="bg-white rounded-xl w-full max-w-2xl p-6 relative">
+
+      <!-- Close -->
+      <button id="closeBookingModal" class="absolute top-4 right-4 text-gray-500 hover:text-black">
+        ✕
+      </button>
+
+      <h3 class="text-2xl font-semibold mb-6">
+        Book Your Cruise
+      </h3>
+
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <input type="text" placeholder="Full Name" class="border rounded-lg px-4 py-3 w-full">
+
+        <input type="email" placeholder="Email Address" class="border rounded-lg px-4 py-3 w-full">
+
+        <input type="tel" placeholder="Phone Number" class="border rounded-lg px-4 py-3 w-full">
+
+        <input type="date" class="border rounded-lg px-4 py-3 w-full">
+
+        <select class="border rounded-lg px-4 py-3 w-full">
+          <option>Cabin Type</option>
+          <option>Single Cabin</option>
+          <option>Double Cabin</option>
+          <option>Triple Cabin</option>
+          <option>Single Suite</option>
+          <option>Double Suite</option>
+          <option>Triple Suite</option>
+        </select>
+
+        <input type="number" placeholder="Guests" class="border rounded-lg px-4 py-3 w-full">
+
+        <textarea placeholder="Special Requests" rows="4" class="border rounded-lg px-4 py-3 md:col-span-2"></textarea>
+
+        <button type="submit"
+          class="md:col-span-2 bg-[#cc9966] hover:bg-[#b88758] text-white py-3 rounded-lg transition">
+          Submit Booking Request
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const modal = document.getElementById('bookingModal');
+      const closeBtn = document.getElementById('closeBookingModal');
+
+      // فتح المودال من أي زرار Book Now
+      document.querySelectorAll('.open-booking-modal').forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.classList.add('overflow-hidden');
+        });
+      });
+
+      // زرار الإغلاق
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+      });
+
+      // إغلاق عند الضغط خارج الفورمة
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+
+      // إغلاق بزر ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
