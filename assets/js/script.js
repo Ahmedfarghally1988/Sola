@@ -11,9 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
   });
 
-  // open images
+  // فتح الصور
   document.querySelectorAll(".gallery-open").forEach((img) => {
     img.addEventListener("click", () => {
       const index = parseInt(img.dataset.index);
@@ -21,21 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.classList.remove("hidden");
       lightbox.classList.add("flex");
 
+      // منع اسكرول الصفحة الخلفية
+      document.documentElement.classList.add("overflow-hidden");
+      document.body.classList.add("overflow-hidden");
+
       swiper.slideToLoop(index, 0);
     });
   });
 
-  // ❌ غلق البوب اب عند الضغط خارج الصورة فقط
+  // غلق البوب اب عند الضغط خارج المحتوى
   lightbox.addEventListener("click", () => {
     lightbox.classList.add("hidden");
     lightbox.classList.remove("flex");
+
+    // إعادة الاسكرول
+    document.documentElement.classList.remove("overflow-hidden");
+    document.body.classList.remove("overflow-hidden");
   });
 
-  // ✅ مهم جدًا: امنع الإغلاق من داخل المحتوى
+  // منع غلق البوب اب عند الضغط داخل السلايدر
   document.querySelector(".mySwiper").addEventListener("click", (e) => {
     e.stopPropagation();
   });
 
+  // منع غلق البوب اب عند الضغط على الأسهم
   document
     .querySelector(".swiper-button-next")
     .addEventListener("click", (e) => {
@@ -47,85 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("click", (e) => {
       e.stopPropagation();
     });
-});
-
-
-/////////// photo lightbox Crusie  //////////////
-document.addEventListener("DOMContentLoaded", () => {
-  const lightbox = document.getElementById("lightboxCrusie");
-  const closeBtn = document.getElementById("closeLightboxCrusie");
-  const images = Array.from(document.querySelectorAll(".gallery-img-crusie"));
-
-  let lightboxSwiperCrusie; 
-
-
-  // =========================
-  function buildSlides() {
-    const wrapper = document.querySelector(
-      ".lightboxSwiperCrusie .swiper-wrapper",
-    );
-    wrapper.innerHTML = "";
-
-    images.forEach((img) => {
-      wrapper.innerHTML += `
-        <div class="swiper-slide">
-          <img src="${img.src}" class="w-full max-h-[80vh] object-contain">
-        </div>
-      `;
-    });
-  }
-
-  function initSwiper() {
-    lightboxSwiperCrusie = new Swiper(".lightboxSwiperCrusie", {
-      loop: true,
-      navigation: {
-        nextEl: "#nextBtnCrusie",
-        prevEl: "#prevBtnCrusie",
-      },
-    });
-  }
-
-
-  function openLightbox(index) {
-    buildSlides();
-
-    lightbox.classList.remove("hidden");
-    lightbox.classList.add("flex");
-
-    // أول مرة init
-    if (!lightboxSwiperCrusie) {
-      initSwiper();
-    } else {
-      lightboxSwiperCrusie.update();
-    }
-
-    setTimeout(() => {
-      lightboxSwiperCrusie.update();
-      lightboxSwiperCrusie.slideToLoop(index, 0);
-    }, 50);
-  }
-
-
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      openLightbox(index);
-    });
-  });
-
-
-  function closeLightbox() {
-    lightbox.classList.add("hidden");
-    lightbox.classList.remove("flex");
-  }
-
-  closeBtn.addEventListener("click", closeLightbox);
-
-  // إغلاق عند الضغط خارج السلايدر (اختياري)
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
 });
 
 /////////// menu mobile /////////////
@@ -206,6 +140,10 @@ const swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
   effect: "slide",
   grabCursor: true,
@@ -340,18 +278,196 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ///////////// accordion ////////////
 document.addEventListener("DOMContentLoaded", () => {
-
   document.querySelectorAll(".accordion-header").forEach((header) => {
     header.addEventListener("click", () => {
-
       const currentContent = header.nextElementSibling;
       const currentIcon = header.querySelector("svg");
 
       // فتح / قفل العنصر الحالي فقط
       currentContent.classList.toggle("hidden");
       currentIcon.classList.toggle("rotate-180");
+    });
+  });
+});
 
+///////////// model booking ////////////
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("bookingModal");
+  const closeBtn = document.getElementById("closeBookingModal");
+
+  // فتح المودال من أي زرار Book Now
+  document.querySelectorAll(".open-booking-modal").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
     });
   });
 
+  // زرار الإغلاق
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+  });
+
+  // إغلاق عند الضغط خارج الفورمة
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+  });
+
+  // إغلاق بزر ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+  });
 });
+
+///////////// guests لbooking from ////////////
+const guests = {
+  adults: 1,
+  children: 0,
+  infants: 0,
+};
+
+function updateGuests() {
+  document.getElementById("adults-count").textContent = guests.adults;
+  document.getElementById("children-count").textContent = guests.children;
+  document.getElementById("infants-count").textContent = guests.infants;
+
+  document.getElementById("adults-input").value = guests.adults;
+  document.getElementById("children-input").value = guests.children;
+  document.getElementById("infants-input").value = guests.infants;
+
+  document.getElementById("total-guests").textContent =
+    guests.adults + guests.children + guests.infants;
+}
+
+document.querySelectorAll(".plus").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    guests[btn.dataset.target]++;
+    updateGuests();
+  });
+});
+
+document.querySelectorAll(".minus").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const key = btn.dataset.target;
+
+    if (key === "adults") {
+      guests[key] = Math.max(1, guests[key] - 1);
+    } else {
+      guests[key] = Math.max(0, guests[key] - 1);
+    }
+
+    updateGuests();
+  });
+});
+
+updateGuests();
+
+///////////// tel +20 ///////////
+const iti = window.intlTelInput(document.querySelector("#phone"), {
+  initialCountry: "auto",
+  nationalMode: false,
+  separateDialCode: false,
+  utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js",
+});
+
+document.querySelector("#phone").addEventListener("input", function () {
+  iti.setNumber(this.value);
+});
+
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // hide form
+  this.classList.add("hidden");
+
+  // show success
+  document.getElementById("bookingSuccess").classList.remove("hidden");
+});
+
+
+ /////////// photo lightbox Crusie  //////////////
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightboxCrusie");
+      const closeBtn = document.getElementById("closeLightboxCrusie");
+      const images = Array.from(document.querySelectorAll(".gallery-img-crusie"));
+
+      let swiper = null;
+
+      const wrapper = document.querySelector(".lightboxSwiperCrusie .swiper-wrapper");
+
+      function buildSlides() {
+        wrapper.innerHTML = "";
+
+        images.forEach((img) => {
+          wrapper.innerHTML += `
+        <div class="swiper-slide">
+          <img src="${img.src}" class="w-full max-h-[80vh] object-contain">
+        </div>
+      `;
+        });
+      }
+
+      function initSwiper(index = 0) {
+
+        if (swiper) {
+          swiper.destroy(true, true); // 🔥 أهم سطر
+        }
+
+        swiper = new Swiper(".lightboxSwiperCrusie", {
+          loop: false,
+          navigation: {
+            nextEl: "#nextBtnCrusie",
+            prevEl: "#prevBtnCrusie",
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+          },
+        });
+
+        swiper.slideTo(index, 0);
+      }
+
+      function openLightbox(index) {
+        buildSlides();
+
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+
+        setTimeout(() => {
+          initSwiper(index);
+        }, 50);
+      }
+
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => openLightbox(index));
+      });
+
+      function closeLightbox() {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+
+        if (swiper) {
+          swiper.destroy(true, true); // 🔥 مهم برضه
+          swiper = null;
+        }
+      }
+
+      closeBtn.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+    });
